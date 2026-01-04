@@ -113,18 +113,50 @@
 // 12. Find Second Word
 // Write a function that returns the second word of a sentence using split().
 //Solution 
-let senctence = "hello people";
-let 
+// function findSeconWord(){
+//     let senctence = "hello people";
+// let secondWord = senctence.split(" ");
+
+// console.log(secondWord[1]);
+// }
+// findSeconWord();
+
 
 
 // 13. Censor a Word
 // Replace all instances of a bad word like "dumb" in a string with "****".
+//Solution
+// let str = "There were a dumb fox and a dumb bunny";
+// console.log(str);
+// let formal = str.replaceAll("dumb","great");
+// console.log(formal);
+
 // 14. Count Words in Sentence
 // Use .split() and .length to count how many words are in a sentence.
+//Solution
+// let sentence = "javascript is amazing language";
+// let countWord = sentence.split(" ");
+
+// console.log(`words in this sentence are: ${countWord.length}`);
+
 // 15. Check if Word Exists
 // Return true if a specific word (e.g., "cat") exists in a string using indexOf.
+//Solution
+// let animals = "dog cat wolf and fox";
+
+// console.log(animals.includes("cat"));
+// if(animals.includes("wolf")){
+//     conosole.log("true");
+// }else{
+//     console.log("it does not include cat")
+// }
+
+
 // 16. Extract Domain from Email
 // Given an email address, extract and return the domain name (everything after @).
+
+
+
 // 17. Reverse Words in Sentence
 // Given a sentence, split it into words, reverse the array, and join it back into a string.
 // 18. Check Palindrome (Basic)
@@ -182,3 +214,56 @@ let
 // 40. Detect Palindromes in Sentence
 // Return all palindromic words in a sentence (e.g., "madam is at civic center" →
 // ["madam", "civic"]).
+
+
+
+
+
+
+
+
+// JavaScript Number Problems
+
+// 1. Round a Number
+// Round the number 4.7 using Math.round().
+// 2. Ceil a Decimal
+// Use Math.ceil() to round 5.3 up to the next whole number.
+// 3. Floor a Decimal
+// Use Math.floor() to round 8.9 down to the previous whole number.
+// 4. Generate a Random Number (0–1)
+// Create a function that returns a random number between 0 and 1 using
+// Math.random().
+// 5. Random Integer (0–9)
+// Generate a random whole number between 0 and 9.
+// 6. Random Integer (1–100)
+// Generate a random integer between 1 and 100.
+// 7. Convert String to Integer
+// Use parseInt() to convert the string "42" into a number.
+// 8. Convert String to Float
+// Use parseFloat() to convert "3.14159" into a floating point number.
+// 9. Round User Input
+// Take a number from a form input, round it, and display the result on the page.
+// 10. Dice Simulator
+// Simulate a 6-sided dice roll (returns a number between 1 and 6).
+// 11. Temperature Rounding
+// Round a temperature value (e.g., 36.6) to the nearest integer using Math.round().
+
+// 12. Ceil Shopping Price
+// If the product price is $9.25, use Math.ceil() to charge the user $10.
+// 13. Parse and Add
+// Convert two string numbers like "10" and "5.5" using parseInt() and
+// parseFloat() and add them.
+// 14. Random Even Number (2–20)
+// Generate a random even number between 2 and 20.
+// 15. Check if Parsed Value is a Number
+// Write a function that checks if parseInt(input) is a valid number (not NaN).
+// 16. Round All Prices in Array
+// Given an array of prices with decimals, return a new array with all prices rounded.
+// 17. Simulate Coin Toss
+// Use Math.random() to simulate a coin toss that returns "Heads" or "Tails".
+// 18. Random Integer within Range (Min–Max)
+// Create a function that returns a random integer between any two numbers (inclusive).
+// 19. Extract Number from Text
+// Use parseFloat() to extract the number from "Total: 45.90 USD".
+// 20. Round to Nearest 0.5
+// Given a decimal number, round it to the nearest 0.5 (e.g., 4.3 → 4.5, 4.1 → 4.0).
