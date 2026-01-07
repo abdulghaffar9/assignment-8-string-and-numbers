@@ -154,63 +154,174 @@
 
 // 16. Extract Domain from Email
 // Given an email address, extract and return the domain name (everything after @).
-
+//Solution
+// let email = "abdul33333@gmail.com";
+// let domain = email.slice(email.indexOf("@"), email.length);
+// console.log(domain);
 
 
 // 17. Reverse Words in Sentence
 // Given a sentence, split it into words, reverse the array, and join it back into a string.
+//Solution 
+// let sentence = "i am the sentence";
+// let splitedSetence = sentence.split(" ");
+// console.log(splitedSetence);
+// let reversedArr = splitedSetence.reverse();
+// console.log(reversedArr);
+// let joinedSentence = reversedArr.join(" ");
+// console.log(joinedSentence);
+
+
 // 18. Check Palindrome (Basic)
 // Write a function that checks if a word is the same when reversed (ignore case).
+//Solution
+// function checkPalidrome(word){
+//     const reversedWord = word.split("").reverse().join("");
+//     return word === reversedWord;
+// }
+// console.log(checkPalidrome("her"));
+// console.log(checkPalidrome("level"));
+
+
 // 19. Count Vowels
 // Count how many vowels are in a given string using a loop and charAt.
+//Solution
+
+//     let count = 0;
+// let str = "vowels are here";
+// let vowels  = "aeiouAEIOU";
+// for(let i = 0; i < str.length; i++){
+//     if(vowels.includes(str.charAt(i))){
+//         count++
+//     }
+    
+// }
+
+// console.log(count)
+
 // 20. Alternate Case Converter
 // Convert a string to alternating case (e.g., "hello" → "HeLlO").
 // a.
+//Solution
+// let str = "alternating case";
+// let result = "";
+// for(let i =0; i < str.length; i++){
+//     if(i % 2 === 0){
+//         result += str.charAt(i).toUpperCase();
+//     }else{
+//         result += str.charAt(i).toLowerCase();
+//         }
+// }
+
+// console.log(result);
+
+
 // 21. Title Casing a Sentence
 // Convert a full sentence so that the first letter of each word is capitalized.
+//Solution 
+// let senctence = "i love javascript";
+// let words = senctence.toLowerCase().split(" ");
+// let result = [];
+// for(let i = 0; i < words.length; i++){
+//     let word = words[i];
+//     result.push(word.charAt(0).toUpperCase() + word.slice(1));
+  
+// }
+// result = result.join(" ")
+// console.log(result)
+
+
 // 22. Remove Duplicate Words
 // Given a sentence, remove any repeated words (case-insensitive).
+//Solution
+// let senctence = "i love javascript love i";
+// let words =  senctence.toLowerCase().split(" ");
+// let unique = [];
+
+// for(let i = 0; i< words.length; i++){
+// if(!unique.includes(words[i])){
+//     unique.push(words[i]);
+// }
+// }
+
+// unique = unique.join(" ");
+// console.log(unique);
+
+
+
 // 23. Mask Email Address
 // Convert an email like john.doe@example.com to j***@example.com.
+
+
 // 24. Find Most Frequent Word
 // Return the word that appears most frequently in a paragraph.
+
+
 // 25. Abbreviate a Full Name
 // Given John Ronald Reuel Tolkien, return J.R.R.T. using split, charAt, and
 // toUpperCase.
+
+
 // 26. Check if Anagram
 // Write a function that checks whether two strings are anagrams (same letters, different
 
 // order).
+
+
 // 27. Find All Word Positions
 // Return all indices where a specific word occurs in a string (case-insensitive).
+
+
 // 28. Reverse Each Word
 // Given a sentence, reverse each word individually but keep them in the same order.
+
+
 // 29. Smart Word Wrap
 // Break a sentence into lines of a given character limit, wrapping on spaces (not in the
 // middle of a word).
+
+
 // 30. Find Longest Word
 // Find and return the longest word in a sentence.
+
+
 // 31. Censor Multiple Bad Words
 // Given a list of bad words, replace each with "***" in a paragraph using replaceAll
 // and a loop.
+
+
 // 32. Detect Repeated Characters
 // Return all characters that appear more than once in a string.
+
+
 // 33. Compress Repeating Characters
 // Convert "aaabbbcc" to "a3b3c2".
+
+
 // 34. Check Password Strength
 // Create a function that checks if a password string meets criteria (min 8 chars, contains
 // number, uppercase, lowercase).
+
+
 // 35. Extract Hashtags
 // From a social media post, extract all words starting with #.
+
+
 // 36. CamelCase Converter
 // Convert a sentence like "make this camel case" to "makeThisCamelCase".
+
+
 // 37. Parse CSV Line
 // Given a CSV string like "name,age,email", return an array of values.
+
+
 // 38. Custom Split Without Using split()
 // Write a function that splits a string by a space character without using .split().
 
 // 39. Format Phone Number
 // Given a 10-digit string like "1234567890", return it in the format (123) 456-7890.
+
+
 // 40. Detect Palindromes in Sentence
 // Return all palindromic words in a sentence (e.g., "madam is at civic center" →
 // ["madam", "civic"]).
