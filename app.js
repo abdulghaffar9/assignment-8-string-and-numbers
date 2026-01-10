@@ -415,18 +415,20 @@
 // Convert "aaabbbcc" to "a3b3c2".
 //Solution
 let str = "aaabbcddd";
-let result = "";
-let count = 1;
 
-for(let i =0; i<str.length; i++){
-    if(str.charAt(i) === str.charAt(i +1)){
-        count++;
-    }else{
-        result += str.charAt(i) + count;
-        count = 1;
-    }
-}
-console.log(result);
+
+// let result = "";
+// let count = 1;
+
+// for(let i =0; i<str.length; i++){
+//     if(str.charAt(i) === str.charAt(i +1)){
+//         count++;
+//     }else{
+//         result += str.charAt(i) + count;
+//         count = 1;
+//     }
+// }
+// console.log(result);
 
 
 // 34. Check Password Strength
