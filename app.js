@@ -251,21 +251,79 @@
 
 // 23. Mask Email Address
 // Convert an email like john.doe@example.com to j***@example.com.
+//Solution
+// let email = "abdulghaffar@gmail.com";
+// let parts = email.split("@");
+// let firstPart = parts[0].split("");
+// let firstLetter = firstPart[0];
+// let userLength = firstPart.length -1;
+// let repeatedStars = "*".repeat(userLength);
+// let finalResult = firstLetter + repeatedStars + "@" + parts[1];
+// console.log(finalResult);
 
 
 // 24. Find Most Frequent Word
 // Return the word that appears most frequently in a paragraph.
+//Solution
+// let para = "i love javascript an javascript is amazing";
+// let words = para.toLowerCase().split(" ");
+// let maxCount = 0;
+// let mostFrequent = "";
+
+// for(let i = 0; i <words.length; i++){
+//     let count = 0;
+
+//     for(let j =0; j <words.length; j++){
+//         if(words[i] === words[j]){
+//                count++;
+//         }
+//     }
+
+//     if(count > maxCount){
+//         maxCount = count;
+//         mostFrequent = words[i];
+//     }
+// }
+
+// console.log(mostFrequent);
 
 
 // 25. Abbreviate a Full Name
 // Given John Ronald Reuel Tolkien, return J.R.R.T. using split, charAt, and
 // toUpperCase.
+// let name = "John Reuel Tolkien";
+//      name = name.toUpperCase().split(" ");
+//      console.log(name)
+//      let firstName = name[0];
+//      console.log(firstName)
+//      let firstChar = firstName.charAt(0)
+//      let secondName = name[1];
+//      let secondChar = secondName.charAt(0);
+//      let thirdName = name[2];
+//      let thirdChar = thirdName.charAt(0);
+
+//      let abbreviation = firstChar + secondChar + thirdChar;
+//      console.log(abbreviation);
+
+
+
 
 
 // 26. Check if Anagram
 // Write a function that checks whether two strings are anagrams (same letters, different
-
 // order).
+
+//Solution 
+// let word1  = "listen";
+// let word2 = "hello";
+// word1 = word1.toLowerCase().split("").sort().join("");
+// word2 = word2.toLowerCase().split("").sort().join("");
+
+// if(word1 === word2){
+//     console.log("anagram");
+// }else{
+//     console.log("not anagram");
+// }
 
 
 // 27. Find All Word Positions
@@ -274,6 +332,18 @@
 
 // 28. Reverse Each Word
 // Given a sentence, reverse each word individually but keep them in the same order.
+//solution
+// let sentence = "reverse each word";
+// sentence = sentence.split(" ");
+// console.log(sentence);
+// let firstWord = sentence[0].split("").reverse().join("");
+// console.log(firstWord);
+// let secondWord = sentence[1].split("").reverse().join("");
+// let thirdWord = sentence[2].split("").reverse().join("");
+
+// let reversedWords = firstWord + secondWord + thirdWord;
+// console.log(reversedWords)
+
 
 
 // 29. Smart Word Wrap
@@ -283,19 +353,80 @@
 
 // 30. Find Longest Word
 // Find and return the longest word in a sentence.
+//Solution
+// let sentence = "find the longest word";
+// let words = sentence.split(" ");
+// // console.log(sentence);
+// let longest = "";
+// for(let i = 0; i < words.length; i++){
+//     if(words[i].length > longest.length){
+// longest = words[i]
+//     }
+//     console.log(longest);
+// }
+
+
 
 
 // 31. Censor Multiple Bad Words
 // Given a list of bad words, replace each with "***" in a paragraph using replaceAll
 // and a loop.
+//Solution
+// let senctence = "this is a bad and ugly painting";
+// let badwords = ["bad","ugly"]
+// let words = senctence.split(" ");
+
+// for(let i = 0; i < words.length; i++){
+//     for(let j =0 ; j< badwords.length; j++){
+//         if(words[i].toLowerCase() === badwords[j].toLowerCase()){
+//             words[i] = "*".repeat(words[i].length);
+//         }
+//     }
+// }
+// console.log(words.join(" "));
+
+
 
 
 // 32. Detect Repeated Characters
 // Return all characters that appear more than once in a string.
+//Solution
+// let str = "hellooo javascript";
+// let repeated = [];
+
+// for(let i = 0; i < str.length; i++){
+//     let count = 0;
+//     for(let j = 0; j< str.length; j++){
+//         if(str.charAt(i) === str.charAt(j)){
+//             count++;
+//         }
+//     }
+//     if(count > 1 && !repeated.includes(str.charAt(i))){
+//         repeated.push(str.charAt(i));
+//     }
+// }
+
+// console.log(repeated);
+
+
 
 
 // 33. Compress Repeating Characters
 // Convert "aaabbbcc" to "a3b3c2".
+//Solution
+let str = "aaabbcddd";
+let result = "";
+let count = 1;
+
+for(let i =0; i<str.length; i++){
+    if(str.charAt(i) === str.charAt(i +1)){
+        count++;
+    }else{
+        result += str.charAt(i) + count;
+        count = 1;
+    }
+}
+console.log(result);
 
 
 // 34. Check Password Strength
@@ -337,23 +468,78 @@
 
 // 1. Round a Number
 // Round the number 4.7 using Math.round().
+//Solution
+// let number = 4.7;
+// number = Math.round(number);
+// console.log(number);
+
+
+
 // 2. Ceil a Decimal
 // Use Math.ceil() to round 5.3 up to the next whole number.
+// let number = 4.5;
+// number = Math.ceil(number);
+// console.log(number);
+
+
 // 3. Floor a Decimal
 // Use Math.floor() to round 8.9 down to the previous whole number.
+
+// let number = 4.5;
+// number = Math.floor(number);
+// console.log(number);
+
+
 // 4. Generate a Random Number (0–1)
+// let randomNumber = Math.round(Math.random(2));
+// console.log(randomNumber);
+
+
 // Create a function that returns a random number between 0 and 1 using
 // Math.random().
+
+// function generateRandom(){
+//     let randomNumber = Math.round(Math.random(2));
+//      console.log(randomNumber);
+// }
+// generateRandom();
+
+
 // 5. Random Integer (0–9)
 // Generate a random whole number between 0 and 9.
+// let randomNumber = Math.round(Math.random( )* 10);
+//      console.log(randomNumber);
+
 // 6. Random Integer (1–100)
 // Generate a random integer between 1 and 100.
+
+// let randomNumber = Math.round(Math.random( )* 101);
+// console.log(randomNumber)
+
+
+
 // 7. Convert String to Integer
 // Use parseInt() to convert the string "42" into a number.
+// let number = "42";
+// number = parseInt(number);
+// console.log(number)
+
+
+
 // 8. Convert String to Float
 // Use parseFloat() to convert "3.14159" into a floating point number.
+//Solution
+// let number =  parseFloat("3.14159");
+// // number = parseFloat(number);
+// console.log(number);
+
+
 // 9. Round User Input
 // Take a number from a form input, round it, and display the result on the page.
+//Solution
+
+
+
 // 10. Dice Simulator
 // Simulate a 6-sided dice roll (returns a number between 1 and 6).
 // 11. Temperature Rounding
